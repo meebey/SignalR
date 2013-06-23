@@ -129,7 +129,7 @@ namespace Microsoft.AspNet.SignalR.Client.Http
             }
         }
 
-#if (NET4 || NET45)
+#if (NET4 || NET45) && !MONO
         public void AddClientCerts(X509CertificateCollection certificates)
         {
             if (certificates == null)

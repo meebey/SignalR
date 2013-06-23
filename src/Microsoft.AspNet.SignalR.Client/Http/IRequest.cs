@@ -52,7 +52,7 @@ namespace Microsoft.AspNet.SignalR.Client.Http
         /// <param name="headers">request headers</param>
         void SetRequestHeaders(IDictionary<string, string> headers);
 
-#if (NET4 || NET45)
+#if (NET4 || NET45) && !MONO
         /// <summary>
         /// Sets client certificates
         /// </summary>

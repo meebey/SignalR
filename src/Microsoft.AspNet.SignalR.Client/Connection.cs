@@ -705,7 +705,7 @@ namespace Microsoft.AspNet.SignalR.Client
 #endif
             request.SetRequestHeaders(Headers);
 
-#if (NET4 || NET45)
+#if (NET4 || NET45) && !MONO
             request.AddClientCerts(certCollection);
 #endif
         }
